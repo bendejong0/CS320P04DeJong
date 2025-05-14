@@ -84,13 +84,20 @@ void MapColor::getInput(){
 			myList.addEdge(useful1, useful2);
 			myList.addEdge(useful2, useful1);
 		}
+		else
+			break;
 	}
 	colorings.assign(myList.getSize(), -1);
 }
 
 void MapColor::printOutput() const {
-	for (size_t i = 0; i < colorings.size(); i++)
-		cout << i << ": " << colorings[i] << "\n";
+	// make sure there is a proper coloring
+	assert(colorings.size() >= 0);
+	if (colorings[0] == -1)
+		cout << "No possible colorings." << endl;
+	else
+		for (size_t i = 0; i < colorings.size(); i++)
+			cout << i << ": " << colorings[i] << "\n";
 }
 
 void MapColor::AdjList::addEdge(int useful1, int useful2){
