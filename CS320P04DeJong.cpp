@@ -9,6 +9,5 @@ int main() {
 	problemInst.solve();
 	problemInst.printOutput();
 
-
 	return 0;
 }

@@ -17,13 +17,11 @@ bool MapColor::goodChoice(size_t v, int color) const{
 	// colorings is a mapping from V -> C
 	for (const auto& adjV : adjSet) {
 		if (colorings.at(adjV) == color) {
-			cout << "for " << v << ", " << color << " is NOT a good color!" << endl;
 			return false;
 		}
 	}
 	
 
-	cout << "for " << v << ", " << color << " IS A GOOD COLOR!" << endl;
 	return true;
 }
 
