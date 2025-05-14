@@ -97,7 +97,7 @@ void MapColor::printOutput() const {
 		cout << "No possible colorings." << endl;
 	else
 		for (size_t i = 0; i < colorings.size(); i++)
-			cout << i << ": " << colorings[i] << "\n";
+			cout << i << ": " << colorings[i]+1 << "\n";
 }
 
 void MapColor::AdjList::addEdge(int useful1, int useful2){
